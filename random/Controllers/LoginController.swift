@@ -16,14 +16,15 @@ class LoginViewController: UIViewController {
     
     @IBOutlet weak var passwordTextfield: UITextField!
     
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        title = "Login to the NewsApp"
-        self.navigationController?.navigationBar.tintColor = UIColor.black
-
+    @IBOutlet weak var pressed: UIButton!
+    
+    
+    
+    @IBAction func loginPressed(_ sender: UIButton) {
+       
     }
     
-    @IBAction func loginPressed(_ sender: Any) {
+    @IBAction func pressed(_ sender: UIButton) {
         if let email = emailTextfield.text , let password = passwordTextfield.text {
             
         
@@ -38,21 +39,15 @@ class LoginViewController: UIViewController {
         }
     }
     }
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        title = "Login to the NewsApp"
+        self.navigationController?.navigationBar.tintColor = UIColor.black
+
+    }
+
+ 
     
-//    @IBAction func loginPressed(_ sender: UIButton) {
-//        if let email = emailTextfield.text , let password = passwordTextfield.text {
-//
-//
-//        Auth.auth().signIn(withEmail: email, password: password) { [weak self] authResult, error in
-//            if let e = error{
-//                print(e)
-//            } else {
-//                self?.performSegue(withIdentifier: "LoginToApp", sender: self)
-//            }
-////          guard let strongSelf = self else { return }
-//          // ...
-//        }
-//    }
     
     
     /*

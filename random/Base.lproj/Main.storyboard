@@ -89,19 +89,17 @@
                                 <attributedString key="attributedText"/>
                                 <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
                             </textField>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eJi-b7-8Ae">
-                                <rect key="frame" x="88" y="350" width="244" height="52"/>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Dia-LZ-KDu">
+                                <rect key="frame" x="115" y="341" width="185" height="55"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="Login" cornerStyle="capsule">
                                     <backgroundConfiguration key="background">
-                                        <color key="backgroundColor" red="0.93333333333333335" green="0.96078431372549022" blue="0.85882352941176465" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        <color key="backgroundColor" red="0.93333333330000001" green="0.96078431369999995" blue="0.85882352939999995" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                     </backgroundConfiguration>
-                                    <color key="baseForegroundColor" red="0.99607843137254903" green="0.37254901960784315" blue="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 </buttonConfiguration>
                                 <connections>
-                                    <action selector="pressed:" destination="5ol-bG-Axs" eventType="touchUpInside" id="fKW-vD-fsN"/>
-                                    <action selector="registerPressed:" destination="FaZ-es-gwD" eventType="touchUpInside" id="9gx-R6-JrN"/>
+                                    <action selector="pressed:" destination="5ol-bG-Axs" eventType="touchUpInside" id="N3Q-ut-KI1"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -112,6 +110,7 @@
                     <connections>
                         <outlet property="emailTextfield" destination="qru-hS-pYu" id="pZ4-M0-CNU"/>
                         <outlet property="passwordTextfield" destination="tGQ-Sn-hfZ" id="Asw-V9-JSd"/>
+                        <outlet property="pressed" destination="Dia-LZ-KDu" id="hjc-Kh-rl5"/>
                         <segue destination="OiT-T7-zGC" kind="show" identifier="LoginToApp" id="3hN-mc-474"/>
                     </connections>
                 </viewController>
@@ -182,6 +181,17 @@
                     <view key="view" contentMode="scaleToFill" id="emu-c9-t7H">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tabBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="x0z-YD-AS9">
+                                <rect key="frame" x="-20" y="813" width="414" height="49"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <items>
+                                    <tabBarItem systemItem="favorites" id="ruS-Cp-Kcu"/>
+                                    <tabBarItem systemItem="more" id="9m1-af-KgR"/>
+                                </items>
+                            </tabBar>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="USR-Vm-aeW"/>
                         <color key="backgroundColor" red="0.93333333333333335" green="0.96078431372549022" blue="0.85882352941176465" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                     </view>
